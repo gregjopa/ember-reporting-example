@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Week</th>
+      <th># of Commits</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each row in model}}
+      <tr>
+        <td>{{formatted-date row.week}}</td>
+        <td>{{row.total}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
