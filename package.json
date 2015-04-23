@@ -1,7 +1,7 @@
 {
   "name": "ember-reporting-example",
-  "version": "0.0.0",
-  "description": "Small description for ember-reporting-example goes here",
+  "version": "1.0.0",
+  "description": "Example ember app using highcharts and github's stats api",
   "private": true,
   "directories": {
     "doc": "doc",

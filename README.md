@@ -1,7 +1,12 @@
 # Ember-reporting-example
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This example ember apps shows how to query data from an api endpoint and display it using
+the highcharts charting library. This app uses the following ember features:
+
+* query parameters - to manage parameters passed to an api endpoint (?repo=emberjs/ember.js)
+* ic-ajax - to query data from github's stats api
+* components - to wrap the highcharts component to add support for dynamic titles
+* helpers - to format unix timestamps to pretty dates
 
 ## Prerequisites
 
