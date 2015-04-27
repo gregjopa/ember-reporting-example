@@ -21,32 +21,34 @@ export default Ember.Controller.extend({
     return [chartData];
   }),
 
-  chartOptions: {
-    title: {
-      text: 'GitHub Commits',
-      x: -20
-    },
-    subtitle: {
-      text: 'Repo: ',
-      x: -20
-    },
-    xAxis: {
+  chartOptions: Ember.computed('model', function () {
+    return {
       title: {
-        text: 'Week'
+        text: 'GitHub Commits',
+        x: -20
       },
-      type: 'category'
-    },
-    yAxis: {
-      title: {
-        text: '# of Commits'
+      subtitle: {
+        text: 'Repo: ' + this.get('repo'),
+        x: -20
+      },
+      xAxis: {
+        title: {
+          text: 'Week'
+        },
+        type: 'category'
+      },
+      yAxis: {
+        title: {
+          text: '# of Commits'
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+        borderWidth: 0
       }
-    },
-    legend: {
-      layout: 'vertical',
-      align: 'right',
-      verticalAlign: 'middle',
-      borderWidth: 0
-    }
-  }
+    };
+  })
 
 });

@@ -10,10 +10,9 @@ var IndexRoute = Ember.Route.extend({
   },
 
   model: function (params) {
-    var repo = params.repo || 'emberjs/ember.js';
 
     var ajaxParams = {
-      url: 'https://api.github.com/repos/' + repo + '/stats/commit_activity',
+      url: 'https://api.github.com/repos/' + params.repo + '/stats/commit_activity',
       dataType: 'json',
       method: 'GET'
     };
